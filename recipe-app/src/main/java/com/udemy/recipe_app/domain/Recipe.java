@@ -27,6 +27,12 @@ public class Recipe {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "recipe")
     private Set<Ingredient> ingredientSet;
 
+    @ManyToMany
+    @JoinTable(name="recipe_categories",
+                    joinColumns = @JoinColumn(name="recipe_id"),
+                        inverseJoinColumns = @JoinColumn(name = "category_id"))
+    private Set<Category> categorySet;
+
     public Long getId() {
         return id;
     }
