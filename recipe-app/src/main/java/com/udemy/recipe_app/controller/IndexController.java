@@ -26,16 +26,7 @@ public class IndexController {
     }
     @RequestMapping({"/","/index","/index.html"})
     public String getIndexPage(Model model){
-//        Optional<Category> categoryOptional =  categoryRepo.findByDescription("American");
-//        Optional<UnitOfMeasure> unitOfMeasureOptional = unitOfMeasureRepo.findByDescription("Tablespoon");
-//        List<Recipe> recipes = recipeRepo.findAll();
-//        log.debug("Getting Index Page");
-//        System.out.println(categoryOptional.get().getId());
-//        System.out.println(unitOfMeasureOptional.get().getId());
-//        if(!recipes.isEmpty()){
-//            recipes.stream().forEach(x->x.toString());
-//            System.out.println("------------");
-//        }
+
         log.debug("Getting Index page");
 
         model.addAttribute("recipes", recipeService.getRecipes());
