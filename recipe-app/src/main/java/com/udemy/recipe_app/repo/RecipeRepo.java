@@ -9,5 +9,4 @@ import java.util.Optional;
 
 
 public interface RecipeRepo extends CrudRepository<Recipe, Long> {
-    List<Recipe> findAll();
 }
